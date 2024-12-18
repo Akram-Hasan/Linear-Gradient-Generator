@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: url('/assets/bgimage.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: #ffffff;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.header h1 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+.header p {
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #dddddd;
+  margin-top: 0.5rem;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 400px auto;
+  gap: 2rem;
+  width: 90%;
+  max-width: 1200px;
+  padding: 2rem;
+  background: rgba(20, 20, 20, 0.9); /* Semi-transparent black background */
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6);
+}
+
+.container__left {
+  display: grid;
+  grid-template-rows: auto 140px 140px auto auto;
+  gap: 1.5rem;
+}
+
+.left__title {
+  font-size: 1.8rem;
+  text-align: center;
+}
+
+.left__colors {
+  display: flex;
+  justify-content: space-around;
+  gap: 1rem;
+}
+
+.left__colors input[type='color'] {
+  width: 60px;
+  height: 60px;
+  border: none;
+  background-color: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.left__directions ul {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.left__directions ul li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.left__directions ul li.active {
+  background: #4260ea;
+  transform: scale(1.1);
+}
+
+.left__code {
+  padding: 1rem;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  font-size: 1rem;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.copy__code {
+  padding: 0.75rem;
+  border: none;
+  background: blueviolet;
+  color: white;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.copy__code:hover {
+  background: darkviolet;
+  transform: translateY(-3px);
+}
+
+.container__right {
+  min-height: 300px;
+  border-radius: 15px;
+  background: linear-gradient(to top, #0000ff, #800dcc);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+  transition: background-image 0.3s ease;
+}
